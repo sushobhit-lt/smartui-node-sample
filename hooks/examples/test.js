@@ -58,9 +58,10 @@ async function searchTextOnGoogle() {
   //add github app capabilities
   let githubURL = process.env.GITHUB_URL
   if (githubURL) {
-    capabilities.github = {
+    let github = {
       url: githubURL
     }
+    capabilities."LT:Options".github = github ;
   }
 
   if (tunnel === "true") {
